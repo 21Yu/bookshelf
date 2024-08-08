@@ -20,3 +20,15 @@
             value="<% book.publishDate == null ? '' :
             book.publishDate.toISOString().split('T')[0] %>">
 </div>
+<div>
+    <lable>Page count</lable>
+    <input type="number" name="pageCount" value="<% book.pageCount %>">
+</div>
+<div>
+    <lable>Cover</lable>
+    <input type="file" name="cover">
+</div>
+<div>
+    <lable>description</lable>
+    <textarea name="desription"><%= book.description %></textarea>
+</div>
