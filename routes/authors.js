@@ -31,17 +31,22 @@ router.post('/', async (req, res) => {
             author: author,
             errorMessage:'Error Creating Author...'
         }) 
-    }
-    // author.save().
-    // then((newAuthor)=>{
-    //     res.render('authors')
-    // }).
-    // catch((err)=>{
-    //     res.render('authors/new',{
-    //         author: author,
-    //         errorMessage:'Error Creating Author...'
-    //     })
-    // })
-    
+    }  
+})
+
+router.get('/:id', (req, res) => {
+    res.send('Show Author' + req.params.id)
+})
+
+router.get('/:id/eidt', (req, res) => {
+    res.send('Edit Author' + req.params.id)
+})
+
+router.put('/:id', (req, res) => {
+    res.send('Update Author' + req.params.id)
+})
+
+router.delete('/:id', (req, res) => {
+    res.send('Delete Author' + req.params.id)
 })
 module.exports = router
