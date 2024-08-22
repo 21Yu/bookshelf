@@ -38,7 +38,7 @@ router.get('/:id', (req, res) => {
     res.send('Show Author' + req.params.id)
 })
 
-router.get('/:id/eidt', (req, res) => {
+router.get('/:id/edit', (req, res) => {
     res.send('Edit Author' + req.params.id)
 })
 
